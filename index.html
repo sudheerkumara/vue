@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="//assets.adobedtm.com/c710ed4af822/4edff89d26dd/launch-2b93b29cb859-development.min.js" async></script>
+
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <button onclick="tracks()">Help!!!</button>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!??'
+      }
+    })
+
+    function tracks(){
+      if(typeof _satellite == "object")
+        _satellite.track();
+      else
+        console.log("_satellite is not defined");
+    }
+  </script>
+</body>
+</html>
